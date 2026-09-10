@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.encabezado {
+    display: flex;
+    height: 10vh;
+    border: 1px solid red;
+    align-items: center;
+}
+
+.encabezado > h1 {
+    flex: 1;
+    color: red;
+    text-align: center;
+}
+
+.encabezado > nav {
+    display: flex;
+    flex: 2;
+    border: 1px solid brown;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.encabezado > button {
+    flex: 1;
+    border: 1px solid black;
+}
+
+#contenido {
+    border: 1px solid black;
+    min-height: 90vh;
+}
