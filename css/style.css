@@ -13,9 +13,11 @@ body {
 .encabezado {
     display: flex;
     height: 10vh;
+    width: 100%;
     font-family: 'Oswald', sans-serif;
     align-items: center;
     background-color: var(--black);
+    position: fixed;
 }
 
 .encabezado > h1 {
@@ -84,6 +86,8 @@ body {
 }
 
 #contenido {
-    border: 1px solid black;
+    padding-top: 10vh;
     min-height: 90vh;
+    display: flex;
+    flex-direction: column;
 }
