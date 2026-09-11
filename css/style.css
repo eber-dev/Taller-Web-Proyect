@@ -14,7 +14,6 @@ body {
     display: flex;
     height: 10vh;
     font-family: 'Oswald', sans-serif;
-    border: 1px solid red;
     align-items: center;
     background-color: var(--black);
 }
@@ -28,7 +27,6 @@ body {
 .encabezado > nav {
     display: flex;
     flex: 2;
-    border: 1px solid brown;
     height: 100%;
     align-items: center;
     justify-content: space-around;
@@ -46,7 +44,7 @@ body {
 .encabezado > nav button:hover {
     cursor: pointer;
     transform: scale(1.05);
-    background-color: var(--white);
+    background-color: var(--white-soft);
     color: var(--salmon-dark);
 }
 
@@ -72,6 +70,17 @@ body {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-inline: 1rem;
+    background-color: var(--red);
+    border: 1px solid var(--red);
+    color: white;
+    font-weight: 600;
+}
+
+.gratis > button:hover {
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--white);
 }
 
 #contenido {
