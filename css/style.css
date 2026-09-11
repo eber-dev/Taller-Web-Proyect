@@ -1,3 +1,5 @@
+@import url(./colores.css);
+
 * {
     box-sizing: border-box;
 }
@@ -11,13 +13,15 @@ body {
 .encabezado {
     display: flex;
     height: 10vh;
+    font-family: 'Oswald', sans-serif;
     border: 1px solid red;
     align-items: center;
+    background-color: var(--black);
 }
 
 .encabezado > h1 {
     flex: 1;
-    color: red;
+    color: var(--salmon);
     text-align: center;
 }
 
@@ -30,9 +34,44 @@ body {
     justify-content: space-around;
 }
 
-.encabezado > button {
+.encabezado > nav button {
+    color: var(--white);
+    font-size: 1.2rem;
+    background-color: var(--black);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-inline: 0.8rem;
+    border: none;
+}
+.encabezado > nav button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: var(--white);
+    color: var(--salmon-dark);
+}
+
+.encabezado > nav button:focus {
+    outline: none;
+}
+
+.seleccionado {
+    color: var(--salmon-dark) !important;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+}
+
+.gratis {
     flex: 1;
-    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gratis > button {
+    font-size: 1.2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-inline: 1rem;
 }
 
 #contenido {
