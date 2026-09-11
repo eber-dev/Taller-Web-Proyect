@@ -1,0 +1,134 @@
+@import url(./colores.css);
+
+.inicio1 {
+    height: 110vh;
+    width: 100%;
+    background-image:
+        linear-gradient(
+            to left,
+            rgba(0, 0, 0, 0.1) 0%,
+            rgba(0, 0, 0, 0.3) 40%,
+            rgba(0, 0, 0, 0.7) 75%,
+            rgba(0, 0, 0, 0.95) 100%
+        ),
+        url('../assets/img/Imagen_Inicio.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contenido-inicio {
+    transform: translate(30px, 200px);
+    width: 45%;
+}
+
+.etiqueta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.linea {
+    width: 55px;
+    height: 4px;
+    background-color: var(--red);
+    display: block;
+}
+
+.etiqueta > p {
+    color: var(--salmon);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contenido-inicio h1 {
+    color: var(--white);
+    font-family: 'Oswald', sans-serif;
+    font-size: 4.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.mantra {
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.ir {
+    display: flex;
+    height: 4.5rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+.principal {
+    font-size: 1.2rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-inline: 1rem;
+    background-color: var(--red);
+    border: 1px solid var(--red);
+    color: white;
+    font-weight: 600;
+}
+
+.secundario {
+    font-size: 1.2rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-inline: 1rem;
+    font-weight: 600;
+    background-color: var(--black);
+    color: var(--white);
+    border: 1px solid var(--salmon);
+}
+
+.inicio2 {
+    display: flex;
+    background-color: var(--black);
+    height: 50vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card-inicio {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    align-items: center;
+    width: 25%;
+    height: 70%;
+    padding-inline: 2rem;
+    border-top: 1.5px solid var(--gray);
+    border-left: 1.5px solid var(--gray);
+    border-right: 1.5px solid var(--gray);
+    border-bottom: 5px solid var(--gray);
+}
+
+.card-inicio:hover {
+    border-top: 1.5px solid var(--salmon);
+    border-left: 1.5px solid var(--salmon);
+    border-right: 1.5px solid var(--salmon);
+    border-bottom: 5px solid var(--salmon);
+}
+
+.card-inicio > h1 {
+    color: var(--salmon);
+    font-family: 'Oswald', sans-serif;
+    font-size: 5rem;
+    margin-top: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-inicio > h2 {
+    color: var(--white);
+    margin-top: 1rem;
+}
+
+.card-inicio > p {
+    color: var(--salmon);
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+}
