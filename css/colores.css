@@ -1,0 +1,22 @@
+:root {
+    --red: #ed1c24;
+    --red-dark: #c81017;
+    --red-deep: #8e1117;
+
+    --salmon: #ffaaa3;
+    --salmon-light: #ffbcb7;
+    --salmon-dark: #d9827c;
+
+    --black: #0d1010;
+    --black-soft: #111414;
+    --dark: #171a1a;
+    --dark-light: #202424;
+
+    --white: #f1f1f1;
+    --white-soft: #dcdcdc;
+    --gray: #a7a7a7;
+    --gray-dark: #707474;
+
+    --border: #2a2e2e;
+    --border-light: #3a3e3e;
+}
