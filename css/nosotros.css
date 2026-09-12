@@ -1,0 +1,212 @@
+@import url(./colores.css);
+
+.nosotros1 {
+    height: 90vh;
+    display: flex;
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.1) 0%,
+            rgba(0, 0, 0, 0.3) 40%,
+            rgba(0, 0, 0, 0.7) 75%,
+            rgba(0, 0, 0, 0.95) 100%
+        ),
+        url('../assets/img/Disciplina.png');
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nosotros1 > h1 {
+    color: var(--salmon);
+    font-family: 'Oswald', sans-serif;
+    font-size: 6rem;
+    margin-top: 1rem;
+    margin-bottom: 1.8rem;
+}
+
+.nosotros1 p {
+    color: var(--salmon);
+    font-size: 2.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.nosotros2 {
+    display: flex;
+    height: 55vh;
+    width: 100%;
+    background-color: var(--black);
+}
+
+.historia {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-inline: 2%;
+    justify-content: center;
+}
+
+.historia > section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.historia > section > span {
+    width: 5px;
+    height: 40px;
+    background-color: var(--salmon);
+    display: block;
+}
+
+.historia > section > h1 {
+    color: var(--white);
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    margin-top: 0rem;
+    margin-bottom: 0.5rem;
+}
+
+.historia > p {
+    color: var(--salmon-dark);
+    font-size: 1.3rem;
+    text-align: justify;
+    margin-top: 1rem;
+}
+
+.imagen_seccion2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.imagen_seccion2 > img {
+    height: 80%;
+    width: auto;
+    border: 0.5rem solid var(--dark-light);
+}
+
+.nosotros3 {
+    width: 100%;
+    min-height: 18rem;
+    background-color: var(--black-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nosotros3 > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nosotros3 > div > h1 {
+    color: var(--salmon);
+    font-size: 4rem;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.nosotros3 > div > p {
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.nosotros4 {
+    display: flex;
+    padding-inline: 4rem;
+    gap: 2.3rem;
+    height: 40vh;
+    align-items: center;
+    background-color: var(--dark);
+}
+
+.mision {
+    display: flex;
+    height: 60%;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 3rem;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--dark-light);
+    border: 1px solid transparent;
+}
+
+.mision > img {
+    width: 7rem;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.25;
+    top: 25px;
+    right: 30px;
+}
+
+.mision:hover {
+    border: 1px solid var(--salmon-light);
+}
+
+.mision:hover > img {
+    opacity: 0.5;
+}
+
+.mision:hover > h1 {
+    color: var(--salmon);
+}
+
+.vision {
+    display: flex;
+    height: 60%;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 3rem;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--dark-light);
+    border: 1px solid transparent;
+}
+
+.vision > img {
+    width: 7rem;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.25;
+    top: 25px;
+    right: 30px;
+}
+
+.vision:hover {
+    border: 1px solid var(--salmon-light);
+}
+
+.vision:hover > img {
+    opacity: 0.5;
+}
+
+.vision:hover > h1 {
+    color: var(--salmon);
+}
+
+.mision > h1,
+.vision > h1 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Oswald', sans-serif;
+    z-index: 2;
+    color: white;
+}
+
+.mision > p,
+.vision > p {
+    text-align: justify;
+    z-index: 2;
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    color: white;
+}
