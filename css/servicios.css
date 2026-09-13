@@ -61,10 +61,24 @@
     flex-direction: column;
     align-items: center;
     background-color: var(--dark);
-    border: 1px solid transparent;
+    border: 2px solid transparent;
+    transition: border 0.5s ease;
     border-radius: 1rem;
     overflow: hidden;
-    padding-bottom: 2rem;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.carta-disciplina:hover {
+    border-top: 2px solid var(--red);
+    border-left: 2px solid var(--red);
+    border-right: 2px solid var(--red);
+    border-bottom: 2px solid var(--red);
+}
+
+.carta-disciplina:hover > div > img {
+    transform: scale(1.1);
+    filter: brightness(1.5);
 }
 
 .disciplina-img {
@@ -75,6 +89,7 @@
 .disciplina-img > img {
     width: 100%;
     display: block;
+    transition: transform 0.5s;
 }
 
 .disciplina_info {
@@ -82,6 +97,8 @@
     flex-direction: column;
     align-items: center;
     padding-inline: 1.5rem;
+    height: 20rem;
+    margin-bottom: 1.5rem;
 }
 
 .disciplina_info > h1 {
@@ -92,19 +109,27 @@
 
 .disciplina_info > p {
     color: var(--white);
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     text-align: justify;
+    flex: 1;
 }
 
 .disciplina_info > button {
     border: 2px solid var(--red);
     width: 75%;
+
     background-color: transparent;
     color: var(--white);
     font-size: 1.1rem;
     font-weight: bold;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    transition: background-color 0.5s ease;
+}
+
+.disciplina_info > button:hover {
+    cursor: pointer;
+    background-color: var(--red);
 }
 
 .disciplina_beneficio {
@@ -124,4 +149,22 @@
     color: var(--white);
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+.borde_animado {
+    position: absolute;
+    bottom: -2px;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    margin-inline: 0;
+    height: 0.4rem;
+    width: 100%;
+    background: var(--red);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.carta-disciplina:hover .borde_animado {
+    transform: scaleX(1);
 }
