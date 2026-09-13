@@ -1,0 +1,127 @@
+@import url(./colores.css);
+
+.servicios1 {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    padding-inline: 3rem;
+    background-color: var(--black);
+}
+
+.servicios1 > div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.servicios1 > div > h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.titulo3-rojo {
+    color: var(--red);
+}
+
+.especialidad {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.especialidad > span {
+    width: 0.5rem;
+    height: 4.5rem;
+    background-color: var(--red);
+}
+
+.especialidad > p {
+    font-size: 1.4rem;
+    color: var(--white);
+    text-align: justify;
+}
+
+.servicios2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding-inline: 3.5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: var(--black);
+}
+
+.carta-disciplina {
+    border: 1px solid brown;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding-bottom: 2rem;
+}
+
+.disciplina-img {
+    overflow: hidden;
+    width: 100%;
+}
+
+.disciplina-img > img {
+    width: 100%;
+    display: block;
+}
+
+.disciplina_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 1.5rem;
+}
+
+.disciplina_info > h1 {
+    color: var(--white);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.disciplina_info > p {
+    color: var(--white);
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+.disciplina_info > button {
+    border: 2px solid var(--red);
+    width: 75%;
+    background-color: transparent;
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.disciplina_beneficio {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.disciplina_beneficio > img {
+    height: 2.2rem;
+}
+
+.disciplina_beneficio > p {
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
