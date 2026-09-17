@@ -211,6 +211,79 @@
     color: white;
 }
 
+@media (min-width: 901px) and (max-width: 1100px) {
+    .nosotros1 {
+        height: 75vh;
+        min-height: 500px;
+        padding-inline: 2rem;
+    }
+
+    .nosotros1 > h1 {
+        font-size: clamp(4rem, 8vw, 5.5rem);
+        text-align: center;
+    }
+
+    .nosotros1 p {
+        font-size: clamp(1.4rem, 3vw, 2rem);
+        text-align: center;
+        padding-inline: 1rem;
+    }
+
+    .nosotros2 {
+        min-height: 55vh;
+        height: auto;
+    }
+
+    .historia {
+        width: 50%;
+        padding-inline: 2rem;
+    }
+
+    .historia > section > h1 {
+        font-size: clamp(2rem, 3vw, 2.5rem);
+    }
+
+    .historia > p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
+    .imagen_seccion2 {
+        width: 50%;
+        padding: 2rem;
+    }
+
+    .imagen_seccion2 > img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .nosotros3 > div > h1 {
+        font-size: clamp(3rem, 5vw, 4rem);
+    }
+
+    .nosotros4 {
+        height: auto;
+        min-height: 40vh;
+        padding-inline: 2rem;
+        gap: 1.5rem;
+    }
+
+    .mision,
+    .vision {
+        width: 50%;
+        height: auto;
+        min-height: 280px;
+        padding-inline: 2rem;
+    }
+
+    .mision > p,
+    .vision > p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+}
+
 @media (max-width: 900px) {
     .nosotros1 > h1 {
         font-size: clamp(3rem, 8vw, 5rem);
@@ -239,6 +312,117 @@
     .mision > p,
     .vision > p {
         font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .nosotros1 {
+        height: 75vh;
+        min-height: 500px;
+        padding-inline: 2rem;
+    }
+
+    .nosotros1 > h1 {
+        font-size: clamp(3rem, 8vw, 4.5rem);
+        text-align: center;
+        line-height: 1.1;
+    }
+
+    .nosotros1 p {
+        font-size: clamp(1.2rem, 3vw, 1.7rem);
+        text-align: center;
+        line-height: 1.4;
+        max-width: 700px;
+    }
+
+    .nosotros2 {
+        height: auto;
+        min-height: 0;
+        flex-direction: column;
+        padding-block: 3rem;
+    }
+
+    .historia {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 3rem 2rem;
+    }
+
+    .historia > section {
+        gap: 0.8rem;
+    }
+
+    .historia > section > h1 {
+        font-size: clamp(2rem, 4vw, 2.5rem);
+    }
+
+    .historia > p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .imagen_seccion2 {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1rem 3rem 0;
+    }
+
+    .imagen_seccion2 > img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .nosotros3 {
+        min-height: 18rem;
+        padding: 2rem 1rem;
+        box-sizing: border-box;
+    }
+
+    .nosotros3 > div > h1 {
+        font-size: clamp(2.5rem, 6vw, 3.5rem);
+    }
+
+    .nosotros3 > div > p {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .nosotros4 {
+        height: auto;
+        min-height: 0;
+        flex-direction: column;
+        padding: 4rem 3rem;
+        gap: 2rem;
+        box-sizing: border-box;
+    }
+
+    .mision,
+    .vision {
+        width: 100%;
+        height: auto;
+        min-height: 280px;
+        box-sizing: border-box;
+        padding: 2.5rem 2.5rem;
+    }
+
+    .mision > h1,
+    .vision > h1 {
+        font-size: clamp(2rem, 4vw, 2.5rem);
+    }
+
+    .mision > p,
+    .vision > p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .mision > img,
+    .vision > img {
+        width: 6rem;
+        right: 2rem;
+        top: 2rem;
     }
 }
 
