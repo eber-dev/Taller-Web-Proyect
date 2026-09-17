@@ -14,7 +14,7 @@ body {
 
 .encabezado {
     display: flex;
-    height: 10vh;
+    height: 70px;
     width: 100%;
     font-family: 'Oswald', sans-serif;
     align-items: center;
@@ -27,6 +27,8 @@ body {
     flex: 1;
     color: var(--salmon);
     text-align: center;
+    margin: 0;
+    font-size: 2rem;
 }
 
 .encabezado > nav {
@@ -34,7 +36,8 @@ body {
     flex: 2;
     height: 100%;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .encabezado > nav button {
@@ -45,7 +48,12 @@ body {
     padding-bottom: 0.5rem;
     padding-inline: 0.8rem;
     border: none;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
+
 .encabezado > nav button:hover {
     cursor: pointer;
     transform: scale(1.05);
@@ -79,6 +87,10 @@ body {
     border: 1px solid var(--red);
     color: white;
     font-weight: 600;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border 0.2s ease;
 }
 
 .gratis > button:hover {
@@ -89,35 +101,34 @@ body {
 }
 
 #contenido {
-    padding-top: 10vh;
+    padding-top: 70px;
     flex: 1;
     display: flex;
     flex-direction: column;
+    min-height: 0;
 }
 
 .pie {
     display: flex;
-    height: 25vh;
     background-color: var(--dark);
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
+    padding: 2rem;
 }
 
-.pie1 {
+.pie1,
+.pie2,
+.pie3 {
     flex: 1;
     display: flex;
     flex-direction: column;
     color: var(--white);
-}
-
-.pie1 > div {
-    display: flex;
-    width: 30%;
-    justify-content: end;
+    align-items: center;
 }
 
 .pie1 > h1 {
     font-size: 2.5rem;
+    margin-top: 0;
     margin-bottom: 1rem;
     color: var(--salmon);
     text-align: center;
@@ -126,24 +137,20 @@ body {
 .pie1 > p {
     font-size: 1.2rem;
     text-align: center;
+    margin-top: 0;
 }
 
 .pie1 > div {
     display: flex;
-    align-items: start;
+    justify-content: start;
     gap: 2rem;
+    width: 75%;
 }
 
 .pie1 > div img {
     filter: invert(1);
     height: 2rem;
-}
-
-.pie2 {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    color: var(--white);
+    width: auto;
 }
 
 .pie2 > h2 {
@@ -159,13 +166,6 @@ body {
     margin-bottom: 0.6rem;
 }
 
-.pie3 {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    color: var(--white);
-}
-
 .pie3 > h2 {
     text-align: center;
     margin-top: 1rem;
@@ -177,4 +177,101 @@ body {
     font-size: 1.2rem;
     margin-top: 0.6rem;
     margin-bottom: 0.6rem;
+}
+
+.menu-hamburguesa {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .encabezado {
+        height: 70px;
+    }
+
+    .encabezado > h1 {
+        font-size: 1.6rem;
+    }
+
+    .encabezado > nav {
+        gap: 0.2rem;
+    }
+
+    .encabezado > nav button {
+        font-size: 1rem;
+        padding-inline: 0.5rem;
+    }
+
+    .gratis > button {
+        font-size: 1rem;
+        padding-inline: 0.7rem;
+    }
+
+    .pie {
+        padding: 2rem 1rem;
+    }
+
+    .pie1 > h1 {
+        font-size: 2rem;
+    }
+
+    .pie1 > p,
+    .pie2 p,
+    .pie3 p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .encabezado {
+        height: 70px;
+        padding: 0 1rem;
+    }
+
+    .encabezado > h1 {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .encabezado > nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 0;
+        background-color: var(--black);
+        padding: 1rem 0;
+    }
+
+    .encabezado > nav.menu-abierto {
+        display: flex;
+    }
+
+    .encabezado > nav button {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1.1rem;
+    }
+
+    .menu-hamburguesa {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--white);
+        font-size: 2rem;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: 0.5rem;
+    }
+
+    .gratis {
+        flex: 0;
+    }
+
+    .gratis > button {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.7rem;
+    }
 }
