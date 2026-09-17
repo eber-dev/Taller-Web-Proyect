@@ -83,8 +83,8 @@
 }
 
 .imagen_seccion2 > img {
-    height: 80%;
-    width: auto;
+    max-width: 600px;
+    height: auto;
     border: 0.5rem solid var(--dark-light);
 }
 
@@ -209,4 +209,147 @@
     font-size: 1.3rem;
     margin-top: 0.5rem;
     color: white;
+}
+
+@media (max-width: 900px) {
+    .nosotros1 > h1 {
+        font-size: clamp(3rem, 8vw, 5rem);
+        text-align: center;
+    }
+
+    .nosotros1 p {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+        text-align: center;
+        padding-inline: 1rem;
+    }
+
+    .historia {
+        padding-inline: 1.5rem;
+    }
+
+    .historia > p {
+        font-size: 1.1rem;
+    }
+
+    .mision,
+    .vision {
+        padding-inline: 2rem;
+    }
+
+    .mision > p,
+    .vision > p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .nosotros1 {
+        height: 80vh;
+        padding-inline: 1rem;
+        text-align: center;
+    }
+
+    .nosotros1 > h1 {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+        margin-bottom: 1rem;
+    }
+
+    .nosotros1 p {
+        font-size: clamp(1rem, 4.5vw, 1.5rem);
+        line-height: 1.4;
+    }
+
+    .nosotros2 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .historia,
+    .imagen_seccion2 {
+        width: 100%;
+    }
+
+    .historia {
+        padding-top: 3rem;
+        padding-right: 1.5rem;
+        padding-bottom: 2rem;
+        padding-left: 1.5rem;
+    }
+
+    .historia > section {
+        gap: 0.7rem;
+    }
+
+    .historia > section > h1 {
+        font-size: 2rem;
+    }
+
+    .historia > p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .imagen_seccion2 {
+        padding-top: 1rem;
+        padding-right: 1.5rem;
+        padding-bottom: 3rem;
+        padding-left: 1.5rem;
+    }
+
+    .imagen_seccion2 > img {
+        width: 100%;
+        height: auto;
+    }
+
+    .nosotros3 {
+        flex-direction: column;
+        padding: 2rem 0;
+    }
+
+    .nosotros3 > div {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .nosotros3 > div > h1 {
+        font-size: 3rem;
+    }
+
+    .nosotros3 > div > p {
+        margin: 0;
+        text-align: center;
+    }
+
+    .nosotros4 {
+        flex-direction: column;
+        height: auto;
+        padding: 3rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .mision,
+    .vision {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        padding: 2rem 1.5rem;
+    }
+
+    .mision > h1,
+    .vision > h1 {
+        font-size: 2rem;
+    }
+
+    .mision > p,
+    .vision > p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .mision > img,
+    .vision > img {
+        width: 5rem;
+        right: 1.5rem;
+        top: 1.5rem;
+    }
 }
