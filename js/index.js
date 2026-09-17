@@ -1,5 +1,6 @@
 import { cargarmodulo } from '../js/cambio.js';
 import './navegacion.js';
+import './hamburguesa.js';
 
 const inicio = document.querySelector('.inicio');
 const nosotros = document.querySelector('.nosotros');
