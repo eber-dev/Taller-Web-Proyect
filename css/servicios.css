@@ -254,3 +254,219 @@
 .etiqueta-part2 > button > img {
     height: 2.5rem;
 }
+
+@media (max-width: 1024px) {
+    .servicios1 {
+        height: auto;
+        min-height: 30vh;
+        padding: 3rem;
+    }
+
+    .servicios1 > div {
+        width: 100%;
+    }
+
+    .servicios1 > div > h1 {
+        font-size: 2.5rem;
+    }
+
+    .especialidad > p {
+        font-size: 1.2rem;
+    }
+
+    .servicios2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 3rem;
+    }
+
+    .disciplina_info {
+        height: auto;
+        min-height: 20rem;
+    }
+
+    .disciplina_info > p {
+        font-size: 1.1rem;
+    }
+
+    .servicios3 {
+        height: auto;
+        padding: 3rem 0;
+    }
+
+    .etiqueta-clase {
+        width: 85%;
+        height: auto;
+    }
+
+    .etiqueta-part1 {
+        padding: 2rem;
+    }
+
+    .etiqueta-part1 > h1 {
+        font-size: 2.2rem;
+    }
+
+    .etiqueta-part1 > p {
+        font-size: 1.2rem;
+    }
+
+    .etiqueta-part2 > button {
+        width: 75%;
+        height: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .servicios1 {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .servicios1 > div {
+        width: 100%;
+    }
+
+    .servicios1 > div > h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .especialidad {
+        align-items: stretch;
+    }
+
+    .especialidad > span {
+        width: 0.35rem;
+        height: auto;
+        min-height: 4rem;
+    }
+
+    .especialidad > p {
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    .servicios2 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .disciplina_info {
+        height: auto;
+        min-height: 0;
+        padding: 0 1.25rem 1.5rem;
+        margin-bottom: 0;
+    }
+
+    .disciplina_info > h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .disciplina_info > p {
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    .disciplina_info > button {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .disciplina_beneficio {
+        gap: 0.7rem;
+    }
+
+    .disciplina_beneficio > img {
+        height: 1.8rem;
+    }
+
+    .disciplina_beneficio > p {
+        font-size: 1rem;
+    }
+
+    .servicios3 {
+        height: auto;
+        padding: 2rem 1.5rem;
+    }
+
+    .etiqueta-clase {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .etiqueta-part1 {
+        padding: 2rem 1.5rem;
+    }
+
+    .etiqueta-part1 > h1 {
+        align-self: center;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .etiqueta-part1 > p {
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    .etiqueta-part2 {
+        padding: 0 1.5rem 2rem;
+    }
+
+    .etiqueta-part2 > button {
+        width: 100%;
+        height: 4rem;
+    }
+
+    .etiqueta-part2 > button > p {
+        font-size: 1.2rem;
+    }
+
+    .etiqueta-part2 > button > img {
+        height: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .servicios1 {
+        padding: 2rem 1rem;
+    }
+
+    .servicios1 > div > h1 {
+        font-size: 1.7rem;
+    }
+
+    .especialidad > p {
+        font-size: 0.95rem;
+    }
+
+    .servicios2 {
+        padding: 1.5rem 1rem;
+    }
+
+    .disciplina_info > h1 {
+        font-size: 1.3rem;
+    }
+
+    .disciplina_info > p {
+        font-size: 0.95rem;
+    }
+
+    .etiqueta-part1 {
+        padding: 1.5rem 1rem;
+    }
+
+    .etiqueta-part1 > h1 {
+        font-size: 1.7rem;
+    }
+
+    .etiqueta-part2 {
+        padding: 0 1rem 1.5rem;
+    }
+}
