@@ -1,6 +1,7 @@
 import { cargarmodulo } from '../js/cambio.js';
 import './navegacion.js';
 import './hamburguesa.js';
+import { iniciarHorario } from './renderizarhorario.js';
 
 const inicio = document.querySelector('.inicio');
 const nosotros = document.querySelector('.nosotros');
@@ -28,9 +29,10 @@ servicios.addEventListener('click', () => {
     cargarmodulo('servicios');
 });
 
-horarios.addEventListener('click', () => {
+horarios.addEventListener('click', async () => {
     clean();
-    cargarmodulo('horarios');
+    await cargarmodulo('horarios');
+    iniciarHorario();
 });
 
 test.addEventListener('click', () => {
