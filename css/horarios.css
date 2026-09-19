@@ -50,10 +50,13 @@
 }
 
 .horariomsg > p {
-    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
     color: var(--gray);
     line-height: 1.5;
-    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    margin-inline: 0;
 }
 
 .totales {
@@ -66,7 +69,7 @@
 .totales > div {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 35%;
     align-items: center;
     justify-content: center;
     background-color: var(--dark);
@@ -86,6 +89,7 @@
     margin: 0;
     font-size: 0.8rem;
     letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .horario3 {
@@ -139,11 +143,10 @@
     border-color: var(--red);
 }
 
-/* --- GRILLA DE HORARIOS --- */
 .horario4 {
     padding-inline: 3rem;
     background-color: var(--black);
-    padding-bottom: 3rem;
+    padding-bottom: 0;
 }
 
 .horario-grupo {
@@ -242,7 +245,7 @@
     gap: 1rem;
 }
 .instructor-iniciales {
-    width: 45px;
+    width: 50px;
     height: 45px;
     border: 1px solid var(--red);
     color: var(--white);
@@ -288,4 +291,82 @@
 }
 .btn-libre:hover {
     background-color: transparent;
+}
+
+.horario5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    padding-inline: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 3.5rem;
+}
+
+.normativas {
+    height: 60%;
+    width: 96%;
+    display: flex;
+    background-color: transparent;
+    border-top: 1px solid var(--red);
+    border-bottom: 1px solid var(--red);
+    border-right: 1px solid var(--red);
+    border-left: 5px solid var(--red);
+}
+
+.normativa1 {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 2.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.normativa1 > section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.8rem;
+    width: 100%;
+}
+
+.normativa1 > section > img {
+    height: 2rem;
+}
+
+.normativa1 > section > h1 {
+    align-self: flex-start;
+    font-family: 'Oswald', sans-serif;
+    color: var(--white);
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    font-size: 2rem;
+}
+
+.normativa1 > p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+    font-size: 1.15rem;
+    text-align: justify;
+    line-height: 1.55;
+}
+
+.normativa2 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.normativa2 > button {
+    color: var(--white);
+    background-color: var(--red);
+    border: 1px solid var(--red);
+    padding: 1rem 2rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
