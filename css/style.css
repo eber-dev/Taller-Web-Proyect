@@ -48,10 +48,12 @@ body {
     padding-bottom: 0.5rem;
     padding-inline: 0.8rem;
     border: none;
+    border-bottom: 3px solid transparent;
     transition:
         transform 0.2s ease,
         background-color 0.2s ease,
-        color 0.2s ease;
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .encabezado > nav button:hover {
@@ -67,7 +69,7 @@ body {
 
 .seleccionado {
     color: var(--salmon-dark) !important;
-    text-decoration: underline;
+    border-bottom: 3px solid var(--salmon-dark) !important;
     text-underline-offset: 0.5rem;
 }
 
