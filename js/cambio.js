@@ -5,4 +5,6 @@ export async function cargarmodulo(pagina) {
     const modulo = await promesa.text();
 
     contenido.innerHTML = modulo;
+
+    window.scrollTo(0, 0);
 }
