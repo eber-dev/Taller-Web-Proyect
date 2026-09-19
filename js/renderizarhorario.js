@@ -8,6 +8,10 @@ function renderizarHorarios() {
     const filtrado2 = document.querySelector('.filtrado2');
     const filtrado3 = document.querySelector('.filtrado3');
 
+    filtrado1.style.fontFamily = 'Arial, Helvetica, sans-serif';
+    filtrado2.style.fontFamily = 'Arial, Helvetica, sans-serif';
+    filtrado3.style.fontFamily = 'Arial, Helvetica, sans-serif';
+
     filtrado1.innerHTML = '';
     filtrado2.innerHTML = '';
     filtrado3.innerHTML = '';
