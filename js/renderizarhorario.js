@@ -1,143 +1,97 @@
 import { horariosGym } from './horario.js';
 
-let datosdiciplina = 'FULL';
-let datosturno = '1';
+let disciplinaSeleccionada = 'FULL';
+let turnoSeleccionado = '1';
 
-function renderizarHorarios() {
-    const filtrado1 = document.querySelector('.filtrado1');
-    const filtrado2 = document.querySelector('.filtrado2');
-    const filtrado3 = document.querySelector('.filtrado3');
+// Cada grupo relaciona los datos del horario con su contenedor y contador.
+const grupos = [
+    { nombre: 'LUNES, MIÉRCOLES Y VIERNES', contenedor: '.filtrado1', contador: 'contador-1' },
+    { nombre: 'MARTES Y JUEVES', contenedor: '.filtrado2', contador: 'contador-2' },
+    { nombre: 'SÁBADOS · MASTERCLASSES & SPARRING', contenedor: '.filtrado3', contador: 'contador-3' },
+];
 
-    filtrado1.style.fontFamily = 'Arial, Helvetica, sans-serif';
-    filtrado2.style.fontFamily = 'Arial, Helvetica, sans-serif';
-    filtrado3.style.fontFamily = 'Arial, Helvetica, sans-serif';
-
-    filtrado1.innerHTML = '';
-    filtrado2.innerHTML = '';
-    filtrado3.innerHTML = '';
-
-    const horariosFiltrados = horariosGym.filter((elemento) => {
-        const coincideDisciplina =
-            datosdiciplina === 'FULL' ||
-            elemento.disciplina.includes(datosdiciplina);
-
+// Recorremos todos los objetos y guardamos solo los que cumplen ambos filtros.
+export const filtrarHorarios = (horarios, disciplina, turno) => {
+    const filtrados = [];
+    for (const horario of horarios) {
+        const coincideDisciplina = disciplina === 'FULL' || horario.disciplina.includes(disciplina);
         let coincideTurno = true;
+        if (turno === '2') coincideTurno = horario.turnoFiltro === 'MAÑANA';
+        if (turno === '3') coincideTurno = horario.turnoFiltro === 'TARDE / NOCHE';
+        if (coincideDisciplina && coincideTurno) filtrados.push(horario);
+    }
+    return filtrados;
+};
 
-        if (datosturno === '2') {
-            if (elemento.turnoFiltro === 'MAÑANA') {
-                coincideTurno = true;
-            } else {
-                coincideTurno = false;
-            }
-        }
-
-        if (datosturno === '3') {
-            if (elemento.turnoFiltro === 'TARDE / NOCHE') {
-                coincideTurno = true;
-            } else {
-                coincideTurno = false;
-            }
-        }
-
-        return coincideDisciplina && coincideTurno;
-    });
-
-    let cont1 = 0,
-        cont2 = 0,
-        cont3 = 0;
-
-    horariosFiltrados.forEach((e) => {
-        let claseBoton;
-
-        if (e.requiereReserva) {
-            claseBoton = 'btn-reservar';
-        } else {
-            claseBoton = 'btn-reservar btn-libre';
-        }
-
-        const tarjetaHTML = `
-            <div class="carta-horario">
-                <div class="carta-top">
-                    <span class="tag-disciplina">${e.disciplina}</span>
-                    <span class="tag-modalidad">${e.modalidad}</span>
-                </div>
-                
-                <div class="carta-tiempo">
-                    <h2>${e.horaInicio} - ${e.horaFin}</h2>
-                    <p>TURNO ${e.turnoFiltro} · ${e.lugar}</p>
-                </div>
-
-                <div class="carta-instructor">
-                    <div class="instructor-iniciales">${e.iniciales}</div>
-                    <div class="instructor-info">
-                        <h4>${e.instructor}</h4>
-                        <p>${e.cargo}</p>
-                    </div>
-                </div>
-
-                <button class="${claseBoton}">${e.accionText}</button>
+const crearTarjeta = (horario) => {
+    const claseBoton = horario.requiereReserva ? 'btn-reservar' : 'btn-reservar btn-libre';
+    return `
+        <div class="carta-horario">
+            <div class="carta-top">
+                <span class="tag-disciplina">${horario.disciplina}</span>
+                <span class="tag-modalidad">${horario.modalidad}</span>
             </div>
-        `;
+            <div class="carta-tiempo">
+                <h2>${horario.horaInicio} - ${horario.horaFin}</h2>
+                <p>TURNO ${horario.turnoFiltro} · ${horario.lugar}</p>
+            </div>
+            <div class="carta-instructor">
+                <div class="instructor-iniciales">${horario.iniciales}</div>
+                <div class="instructor-info"><h4>${horario.instructor}</h4><p>${horario.cargo}</p></div>
+            </div>
+            <button class="${claseBoton}">${horario.accionText}</button>
+        </div>`;
+};
 
-        if (e.seccion === 'LUNES, MIÉRCOLES Y VIERNES') {
-            filtrado1.innerHTML += tarjetaHTML;
-            cont1++;
-        } else if (e.seccion === 'MARTES Y JUEVES') {
-            filtrado2.innerHTML += tarjetaHTML;
-            cont2++;
-        } else if (e.seccion === 'SÁBADOS · MASTERCLASSES & SPARRING') {
-            filtrado3.innerHTML += tarjetaHTML;
-            cont3++;
+const renderizarHorarios = () => {
+    const horariosFiltrados = filtrarHorarios(horariosGym, disciplinaSeleccionada, turnoSeleccionado);
+
+    // Por cada grupo, recorremos los horarios filtrados y contamos sus clases.
+    for (const grupo of grupos) {
+        const contenedor = document.querySelector(grupo.contenedor);
+        let tarjetas = '';
+        let cantidad = 0;
+        for (const horario of horariosFiltrados) {
+            if (horario.seccion === grupo.nombre) {
+                tarjetas += crearTarjeta(horario);
+                cantidad++;
+            }
         }
-    });
+        contenedor.style.fontFamily = 'Arial, Helvetica, sans-serif';
+        contenedor.innerHTML = tarjetas;
+        document.getElementById(grupo.contador).textContent = `${cantidad} SESIONES DISPONIBLES`;
+    }
+};
 
-    document.getElementById('contador-1').textContent =
-        `${cont1} SESIONES DISPONIBLES`;
-    document.getElementById('contador-2').textContent =
-        `${cont2} SESIONES DISPONIBLES`;
-    document.getElementById('contador-3').textContent =
-        `${cont3} SESIONES DISPONIBLES`;
-}
+const actualizarBotonesActivos = () => {
+    const botonesDisciplina = document.querySelectorAll('.filtro_disciplina');
+    const botonesTurno = document.querySelectorAll('.filtro_horario');
+    for (const boton of botonesDisciplina) {
+        boton.classList.toggle('activo', boton.dataset.info === disciplinaSeleccionada);
+    }
+    for (const boton of botonesTurno) {
+        boton.classList.toggle('activo', boton.dataset.id === turnoSeleccionado);
+    }
+};
 
-function actualizarBotonesActivos() {
-    document.querySelectorAll('.filtro_disciplina').forEach((btn) => {
-        btn.classList.remove('activo');
-        if (
-            btn.dataset.info === datosdiciplina ||
-            (datosdiciplina === 'FULL' && btn.dataset.info === 'FULL')
-        ) {
-            btn.classList.add('activo');
-        }
-    });
-
-    document.querySelectorAll('.filtro_horario').forEach((btn) => {
-        btn.classList.remove('activo');
-        if (btn.dataset.id === datosturno) {
-            btn.classList.add('activo');
-        }
-    });
-}
-
-export function iniciarHorario() {
-    const botonesfiltrado1 = document.querySelectorAll('.filtro_disciplina');
-    const botonesfiltrado2 = document.querySelectorAll('.filtro_horario');
-
+export const iniciarHorario = () => {
+    const botonesDisciplina = document.querySelectorAll('.filtro_disciplina');
+    const botonesTurno = document.querySelectorAll('.filtro_horario');
     renderizarHorarios();
     actualizarBotonesActivos();
 
-    botonesfiltrado1.forEach((boton) => {
+    for (const boton of botonesDisciplina) {
         boton.addEventListener('click', () => {
-            datosdiciplina = boton.dataset.info;
+            disciplinaSeleccionada = boton.dataset.info;
             renderizarHorarios();
             actualizarBotonesActivos();
         });
-    });
-
-    botonesfiltrado2.forEach((boton) => {
+    }
+    for (const boton of botonesTurno) {
         boton.addEventListener('click', () => {
-            datosturno = boton.dataset.id;
+            turnoSeleccionado = boton.dataset.id;
             renderizarHorarios();
             actualizarBotonesActivos();
         });
-    });
-}
+    }
+};

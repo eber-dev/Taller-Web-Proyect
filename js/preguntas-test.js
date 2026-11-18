@@ -1,35 +1,40 @@
-export const disciplinas = {
-    defensa: {
+export const disciplinas = [
+    {
+        id: 'defensa',
         nombre: 'Defensa Personal',
         imagen: '05_Defensa_Personal.jpg',
         descripcion:
             'Técnicas prácticas para protegerte con control en situaciones reales.',
     },
-    karate: {
+    {
+        id: 'karate',
         nombre: 'Karate Do',
         imagen: '01_Karate.jpg',
         descripcion:
             'Tradición, disciplina y control en el combate estructurado.',
     },
-    jiu: {
+    {
+        id: 'jiu',
         nombre: 'Jiu-Jitsu',
         imagen: '03_Jiu_Jitsu.jpg',
         descripcion:
             'Control, palancas y técnica para desenvolverte en el suelo.',
     },
-    muay: {
+    {
+        id: 'muay',
         nombre: 'Muay Thai',
         imagen: '02_Muay_Thai.jpg',
         descripcion:
             'Golpes con puños, codos, rodillas y piernas junto con acondicionamiento físico.',
     },
-    kick: {
+    {
+        id: 'kick',
         nombre: 'Kickboxing',
         imagen: '04_Kickboxing.jpg',
         descripcion:
             'Combinaciones de golpes y patadas, velocidad y trabajo cardiovascular.',
     },
-};
+];
 // Puntos en orden: Defensa Personal, Karate Do, Jiu-Jitsu, Muay Thai y Kickboxing.
 export const preguntas = [
     {
