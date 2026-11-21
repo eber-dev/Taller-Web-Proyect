@@ -87,7 +87,7 @@
 
 .inicio2 {
     display: flex;
-    background-color: var(--black-soft);
+    background-color: var(--bg-alt);
     align-items: stretch;
     justify-content: center;
     gap: 2rem;
@@ -120,14 +120,14 @@
 }
 
 .card-inicio > h1 {
-    color: var(--salmon);
+    color: var(--acento-texto);
     font-family: 'Oswald', sans-serif;
     font-size: clamp(3rem, 5vw, 5rem);
     margin: 0.5rem 0;
 }
 
 .card-inicio > h2 {
-    color: var(--white);
+    color: var(--texto);
     text-align: center;
     margin-top: 1rem;
     margin-right: 0;
@@ -136,7 +136,7 @@
 }
 
 .card-inicio > p {
-    color: var(--salmon);
+    color: var(--acento-texto);
     text-align: center;
     font-size: clamp(1rem, 1.5vw, 1.5rem);
     line-height: 1.5;

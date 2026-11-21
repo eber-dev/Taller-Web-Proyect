@@ -10,6 +10,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: var(--bg);
+    color: var(--texto);
 }
 
 .encabezado {
@@ -18,14 +20,14 @@ body {
     width: 100%;
     font-family: 'Oswald', sans-serif;
     align-items: center;
-    background-color: var(--black);
+    background-color: var(--bg-header);
     position: fixed;
     z-index: 1000;
 }
 
 .encabezado > h1 {
     flex: 1;
-    color: var(--salmon);
+    color: var(--acento-texto);
     text-align: center;
     margin: 0;
     font-size: 2rem;
@@ -41,9 +43,9 @@ body {
 }
 
 .encabezado > nav button {
-    color: var(--white);
+    color: var(--texto);
     font-size: 1.2rem;
-    background-color: var(--black);
+    background-color: var(--bg-header);
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-inline: 0.8rem;
@@ -112,7 +114,7 @@ body {
 
 .pie {
     display: flex;
-    background-color: var(--dark);
+    background-color: var(--bg-card);
     align-items: stretch;
     justify-content: center;
     padding: 2rem;
@@ -124,7 +126,7 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    color: var(--white);
+    color: var(--texto);
     align-items: center;
 }
 
@@ -133,7 +135,7 @@ body {
     font-size: 2.5rem;
     margin-top: 0;
     margin-bottom: 1rem;
-    color: var(--salmon);
+    color: var(--acento-texto);
     text-align: center;
 }
 
@@ -249,7 +251,7 @@ body {
         height: auto;
         flex-direction: column;
         gap: 0;
-        background-color: var(--black);
+        background-color: var(--bg-header);
         padding: 1rem 0;
     }
 
@@ -261,13 +263,14 @@ body {
         width: 100%;
         padding: 0.8rem;
         font-size: 1.1rem;
+        white-space: nowrap;
     }
 
     .menu-hamburguesa {
         display: block;
         background: none;
         border: none;
-        color: var(--white);
+        color: var(--texto);
         font-size: 2rem;
         cursor: pointer;
         margin-left: auto;
@@ -282,4 +285,29 @@ body {
         font-size: 0.9rem;
         padding: 0.5rem 0.7rem;
     }
+}
+
+.tema-toggle {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 0.8rem;
+    border: 1px solid var(--borde);
+    border-radius: 50%;
+    background: transparent;
+    font-size: 1.4rem;
+    line-height: 1;
+    padding: 0;
+    cursor: pointer;
+}
+
+body,
+.encabezado,
+.pie {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+:root:not([data-tema='claro']) .pie img {
+    filter: invert(1);
 }

@@ -1,14 +1,18 @@
 import { cargarmodulo } from './cambio.js';
 import './navegacion.js';
 import './hamburguesa.js';
+import { iniciarTema } from './tema.js';
 import { iniciarHorario } from './renderizarhorario.js';
 import { iniciarTest } from './test.js';
+import { iniciarTutorial } from './tutorial.js';
+import { abrirReserva } from './reservas.js';
 
 const inicio = document.querySelector('.inicio');
 const nosotros = document.querySelector('.nosotros');
 const servicios = document.querySelector('.servicios');
 const horarios = document.querySelector('.horarios');
 const test = document.querySelector('.test');
+const gratis = document.querySelector('.gratis > button:last-child');
 
 inicio.addEventListener('click', () => {
     cargarmodulo('inicio');
@@ -25,6 +29,10 @@ servicios.addEventListener('click', () => {
 horarios.addEventListener('click', async () => {
     await cargarmodulo('horarios');
     iniciarHorario();
+});
+
+gratis.addEventListener('click', () => {
+    abrirReserva('formulario', 0);
 });
 
 test.addEventListener('click', async () => {
@@ -47,9 +55,12 @@ test.addEventListener('click', async () => {
                     seleccionAnterior.classList.add('seleccionado');
             }
         },
-        () => {
-            horarios.click();
-            // El proyecto aún no cuenta con una reserva en línea; se muestran los horarios.
+        (quiereReservar) => {
+            if (quiereReservar) {
+                abrirReserva('formulario', 0);
+            } else {
+                horarios.click();
+            }
         },
     );
 });
@@ -63,3 +74,5 @@ document
         });
     });
 cargarmodulo('inicio');
+iniciarTutorial();
+iniciarTema();

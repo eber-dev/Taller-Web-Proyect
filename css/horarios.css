@@ -3,7 +3,7 @@
 .horario1,
 .horario2,
 .horario3 {
-    background-color: var(--black);
+    background-color: var(--bg);
     padding-inline: 3rem;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .horario1 > h1 {
-    color: var(--white);
+    color: var(--texto);
     margin: 0 0 1rem 0;
     font-family: 'Oswald', sans-serif;
     font-size: 4rem;
@@ -52,7 +52,7 @@
 .horariomsg > p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.4rem;
-    color: var(--gray);
+    color: var(--texto-suave);
     line-height: 1.5;
     margin-top: 1rem;
     margin-bottom: 0;
@@ -72,8 +72,8 @@
     width: 35%;
     align-items: center;
     justify-content: center;
-    background-color: var(--dark);
-    border: 1px solid #333;
+    background-color: var(--bg-card);
+    border: 1px solid var(--borde);
     padding: 1rem 0;
 }
 
@@ -85,7 +85,7 @@
 }
 
 .totales > div > p {
-    color: var(--white);
+    color: var(--texto);
     margin: 0;
     font-size: 0.8rem;
     letter-spacing: 1px;
@@ -106,7 +106,7 @@
 }
 .bloque1 > p,
 .bloque2 > p {
-    color: var(--gray);
+    color: var(--texto-suave);
     font-size: 0.9rem;
     width: 80px;
     margin: 0;
@@ -120,9 +120,9 @@
 
 .filtro_disciplina,
 .filtro_horario {
-    color: var(--gray);
+    color: var(--texto-suave);
     background-color: transparent;
-    border: 1px solid #333;
+    border: 1px solid var(--borde);
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
     cursor: pointer;
@@ -133,19 +133,19 @@
 .filtro_disciplina:hover,
 .filtro_horario:hover {
     border-color: var(--gray);
-    color: var(--white);
+    color: var(--texto);
 }
 
 .filtro_disciplina.activo,
 .filtro_horario.activo {
     background-color: var(--red);
-    color: var(--white);
+    color: var(--texto);
     border-color: var(--red);
 }
 
 .horario4 {
     padding-inline: 3rem;
-    background-color: var(--black);
+    background-color: var(--bg);
     padding-bottom: 0;
 }
 
@@ -157,7 +157,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid var(--borde-suave);
     padding-bottom: 1rem;
     margin-bottom: 1.5rem;
 }
@@ -172,7 +172,7 @@
     background-color: var(--red);
 }
 .grupo-titulo > h2 {
-    color: var(--white);
+    color: var(--texto);
     font-family: 'Oswald', sans-serif;
     font-size: 1.5rem;
     margin: 0;
@@ -180,12 +180,12 @@
 }
 
 .contador-sesiones {
-    color: var(--gray);
+    color: var(--texto-suave);
     font-size: 0.8rem;
-    background-color: var(--dark);
+    background-color: var(--bg-card);
     padding: 0.4rem 0.8rem;
     border-radius: 4px;
-    border: 1px solid #333;
+    border: 1px solid var(--borde);
 }
 
 .grid-cartas {
@@ -195,8 +195,8 @@
 }
 
 .carta-horario {
-    background-color: #111;
-    border: 1px solid #222;
+    background-color: var(--bg-hondo);
+    border: 1px solid var(--borde-suave);
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -219,21 +219,21 @@
 }
 
 .tag-modalidad {
-    color: var(--gray);
+    color: var(--texto-suave);
     font-size: 0.8rem;
-    border: 1px solid #333;
+    border: 1px solid var(--borde);
     padding: 0.2rem 0.5rem;
     border-radius: 3px;
 }
 
 .carta-tiempo h2 {
-    color: var(--white);
+    color: var(--texto);
     font-family: 'Oswald', sans-serif;
     font-size: 2.2rem;
     margin: 0 0 0.2rem 0;
 }
 .carta-tiempo p {
-    color: var(--gray);
+    color: var(--texto-suave);
     font-size: 0.75rem;
     margin: 0;
     letter-spacing: 0.5px;
@@ -248,7 +248,7 @@
     width: 50px;
     height: 45px;
     border: 1px solid var(--red);
-    color: var(--white);
+    color: var(--texto);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -256,7 +256,7 @@
     font-family: 'Oswald', sans-serif;
 }
 .instructor-info h4 {
-    color: var(--white);
+    color: var(--texto);
     margin: 0 0 0.2rem 0;
     font-size: 0.95rem;
 }
@@ -272,7 +272,7 @@
     width: 100%;
     padding: 0.8rem;
     background: transparent;
-    color: var(--white);
+    color: var(--texto);
     border: 1px solid var(--red);
     font-weight: bold;
     cursor: pointer;
@@ -283,10 +283,11 @@
 }
 .btn-reservar:hover {
     background-color: var(--red);
+    color: var(--white);
 }
 .btn-libre {
-    border-color: #333;
-    color: var(--gray);
+    border-color: var(--borde);
+    color: var(--texto-suave);
     cursor: not-allowed;
 }
 .btn-libre:hover {
@@ -297,7 +298,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--black);
+    background-color: var(--bg);
     padding-inline: 3rem;
     padding-top: 1rem;
     padding-bottom: 3.5rem;
@@ -340,7 +341,7 @@
 .normativa1 > section > h1 {
     align-self: flex-start;
     font-family: 'Oswald', sans-serif;
-    color: var(--white);
+    color: var(--texto);
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
     font-size: 2rem;
@@ -348,7 +349,7 @@
 
 .normativa1 > p {
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--white);
+    color: var(--texto);
     font-size: 1.15rem;
     text-align: justify;
     line-height: 1.55;

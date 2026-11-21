@@ -8,8 +8,8 @@
     margin: 0;
     padding: 0;
     border: 0;
-    color: #f7f7f7;
-    background: radial-gradient(ellipse at 50% 12%, #251214 0, #101112 65%);
+    color: var(--texto);
+    background: radial-gradient(ellipse at 50% 12%, var(--bg-tinte) 0, var(--bg) 65%);
     font-family: Arial, sans-serif;
     overflow: auto;
 }
@@ -25,19 +25,19 @@
     gap: 20px;
     min-height: 72px;
     padding: 12px 3%;
-    background: #101112;
-    border-bottom: 1px solid #252525;
+    background: var(--bg);
+    border-bottom: 1px solid var(--borde);
 }
 .test-header button {
-    color: #ddd;
+    color: var(--texto-medio);
     background: transparent;
-    border: 1px solid #343434;
+    border: 1px solid var(--borde);
     padding: 10px;
     cursor: pointer;
 }
 .test-header button:hover,
 .test-header button:focus-visible {
-    border-color: #ed1b2e;
+    border-color: var(--red);
 }
 .test-brand {
     font:
@@ -51,21 +51,21 @@
     place-items: center;
     width: 30px;
     height: 30px;
-    background: #e7182a;
+    background: var(--red);
     font-size: 20px;
 }
 .test-brand b {
-    color: #ed1b2e;
+    color: var(--red);
 }
 .test-current {
     margin-left: auto;
-    color: #aaa;
+    color: var(--texto-suave);
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 0.06em;
 }
 .test-current strong {
-    color: #ed1b2e;
+    color: var(--red);
     margin-left: 10px;
 }
 .test-close {
@@ -87,23 +87,23 @@
 }
 .test-progress-head span:first-child,
 .test-kicker {
-    color: #ee1c2e;
+    color: var(--red);
 }
 .test-progress {
     height: 6px;
     margin: 14px 0 40px;
     border-radius: 5px;
-    background: #343434;
+    background: var(--borde);
 }
 .test-progress span {
     display: block;
     height: 100%;
     border-radius: 5px;
-    background: #ed1b2e;
+    background: var(--red);
     transition: width 0.2s;
 }
 .test-label {
-    color: #999;
+    color: var(--texto-suave);
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
@@ -118,10 +118,10 @@
     text-transform: uppercase;
 }
 .test-step h1 span {
-    color: #ed1b2e;
+    color: var(--red);
 }
 .test-intro {
-    color: #c6c6c6;
+    color: var(--texto-medio);
     line-height: 1.5;
     margin: 0 0 28px;
     max-width: 680px;
@@ -144,9 +144,9 @@
     min-width: 0;
     padding: 22px;
     text-align: left;
-    color: #fff;
-    background: #181a1b;
-    border: 1px solid #2e3031;
+    color: var(--texto);
+    background: var(--bg-card);
+    border: 1px solid var(--borde);
     cursor: pointer;
     transition:
         border-color 0.18s,
@@ -156,8 +156,8 @@
 .test-option:hover,
 .test-option:focus-visible,
 .test-option.is-selected {
-    border-color: #ed1b2e;
-    background: #26191b;
+    border-color: var(--red);
+    background: var(--seleccion);
 }
 .test-option:hover {
     transform: translateY(-2px);
@@ -172,14 +172,14 @@
 }
 .test-option-label,
 .test-detail {
-    color: #ed1b2e;
+    color: var(--red);
     font-size: 10px;
     font-weight: bold;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 .test-description {
-    color: #c3c3c3;
+    color: var(--texto-medio);
     font-size: 13px;
     line-height: 1.5;
 }
@@ -202,9 +202,9 @@
     font-weight: bold;
 }
 .test-result-card {
-    background: #0a0b0c;
+    background: var(--bg-hondo);
     text-align: left;
-    border: 1px solid #242424;
+    border: 1px solid var(--borde);
 }
 .test-result-img {
     display: block;
@@ -217,7 +217,7 @@
     grid-template-columns: 2fr 1fr;
     gap: 24px;
     padding: 24px;
-    color: #c8c8c8;
+    color: var(--texto-medio);
     line-height: 1.5;
     font-size: 14px;
 }
@@ -226,10 +226,10 @@
         600 19px Oswald,
         Arial,
         sans-serif;
-    color: white;
+    color: var(--texto);
 }
 .test-profile {
-    background: #1c1e1f;
+    background: var(--bg-card);
     padding: 16px;
 }
 .test-profile p {
@@ -244,23 +244,24 @@
     flex: 1;
     min-height: 54px;
     padding: 12px;
-    color: white;
-    background: #1b1c1d;
-    border: 1px solid #454545;
+    color: var(--texto);
+    background: var(--bg-card);
+    border: 1px solid var(--borde);
     font-weight: bold;
     cursor: pointer;
 }
 .test-actions .test-primary {
-    background: #e51a2d;
-    border-color: #e51a2d;
+    background: var(--red);
+    border-color: var(--red);
+    color: var(--white);
 }
 .test-actions button:hover,
 .test-actions button:focus-visible {
-    outline: 2px solid #fff;
+    outline: 2px solid var(--texto);
     outline-offset: 2px;
 }
 .test-nota {
-    color: #bcbcbc;
+    color: var(--texto-medio);
     font-size: 12px;
     padding: 0 24px 20px;
     line-height: 1.5;

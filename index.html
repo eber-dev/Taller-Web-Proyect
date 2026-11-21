@@ -1,64 +1,79 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Bushido Academy</title>
-        <link rel="stylesheet" href="./css/style.css" />
-        <link rel="stylesheet" href="./css/inicio.css" />
-        <link rel="stylesheet" href="./css/nosotros.css" />
-        <link rel="stylesheet" href="./css/servicios.css" />
-        <link rel="stylesheet" href="./css/horarios.css" />
-        <link rel="stylesheet" href="./css/test.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <header class="encabezado">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bushido Academy</title>
+    <script>
+        try {
+            const guardado = localStorage.getItem('tema');
+            const tema =
+                guardado ||
+                (matchMedia('(prefers-color-scheme: light)').matches
+                    ? 'claro'
+                    : 'oscuro');
+            document.documentElement.dataset.tema = tema;
+        } catch { }
+    </script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/inicio.css" />
+    <link rel="stylesheet" href="./css/nosotros.css" />
+    <link rel="stylesheet" href="./css/servicios.css" />
+    <link rel="stylesheet" href="./css/horarios.css" />
+    <link rel="stylesheet" href="./css/test.css" />
+    <link rel="stylesheet" href="./css/tutorial.css">
+    <link rel="stylesheet" href="./css/reservas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="encabezado">
+        <h1>BUSHIDO ACADEMY</h1>
+
+        <nav>
+            <button class="inicio seleccionado">Inicio</button>
+            <button class="nosotros">Nosotros</button>
+            <button class="servicios">Servicios</button>
+            <button class="horarios">Horarios</button>
+            <button class="test">Encuentra tu disciplina</button>
+        </nav>
+
+        <button class="menu-hamburguesa" aria-label="Abrir menú">☰</button>
+        <button class="tema-toggle" type="button" aria-label="Cambiar tema">☀️</button>
+
+        <div class="gratis">
+            <button class="ayuda" aria-label="Ver tutorial" title="Ver tutorial">?</button>
+            <button>Clase Gratuita</button>
+        </div>
+    </header>
+
+    <div id="contenido"></div>
+
+    <footer class="pie">
+        <div class="pie1">
             <h1>BUSHIDO ACADEMY</h1>
-
-            <nav>
-                <button class="inicio seleccionado">Inicio</button>
-                <button class="nosotros">Nosotros</button>
-                <button class="servicios">Servicios</button>
-                <button class="horarios">Horarios</button>
-                <button class="test">Encuentra tu disciplina</button>
-            </nav>
-
-            <button class="menu-hamburguesa" aria-label="Abrir menú">☰</button>
-
-            <div class="gratis">
-                <button>Clase Gratuita</button>
+            <p>© 2024 Bushido Academy Madrid. Disciplina y Honor.</p>
+            <div>
+                <img src="./assets/icon/share.svg" alt="share" />
+                <img src="./assets/icon/location.svg" alt="share" />
             </div>
-        </header>
+        </div>
+        <div class="pie2">
+            <h2>ENLACES</h2>
+            <p>Contacto</p>
+            <p>Aviso legal</p>
+        </div>
+        <div class="pie3">
+            <h2>LEGAL</h2>
+            <p>Politica de privacidad</p>
+            <p>Cookies</p>
+        </div>
+    </footer>
 
-        <div id="contenido"></div>
+    <script src="./js/index.js" type="module"></script>
+</body>
 
-        <footer class="pie">
-            <div class="pie1">
-                <h1>BUSHIDO ACADEMY</h1>
-                <p>© 2024 Bushido Academy Madrid. Disciplina y Honor.</p>
-                <div>
-                    <img src="./assets/icon/share.svg" alt="share" />
-                    <img src="./assets/icon/location.svg" alt="share" />
-                </div>
-            </div>
-            <div class="pie2">
-                <h2>ENLACES</h2>
-                <p>Contacto</p>
-                <p>Aviso legal</p>
-            </div>
-            <div class="pie3">
-                <h2>LEGAL</h2>
-                <p>Politica de privacidad</p>
-                <p>Cookies</p>
-            </div>
-        </footer>
-
-        <script src="./js/index.js" type="module"></script>
-    </body>
 </html>
