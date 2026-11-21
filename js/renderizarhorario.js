@@ -1,4 +1,5 @@
 import { horariosGym } from './horario.js';
+import { enlazarBotonesReservar } from './reservas.js';
 
 let disciplinaSeleccionada = 'FULL';
 let turnoSeleccionado = '1';
@@ -39,7 +40,7 @@ const crearTarjeta = (horario) => {
                 <div class="instructor-iniciales">${horario.iniciales}</div>
                 <div class="instructor-info"><h4>${horario.instructor}</h4><p>${horario.cargo}</p></div>
             </div>
-            <button class="${claseBoton}">${horario.accionText}</button>
+            <button class="${claseBoton}" data-id="${horario.id}">${horario.accionText}</button>
         </div>`;
 };
 
@@ -61,6 +62,7 @@ const renderizarHorarios = () => {
         contenedor.innerHTML = tarjetas;
         document.getElementById(grupo.contador).textContent = `${cantidad} SESIONES DISPONIBLES`;
     }
+    enlazarBotonesReservar();
 };
 
 const actualizarBotonesActivos = () => {

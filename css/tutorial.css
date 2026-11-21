@@ -1,0 +1,94 @@
+.tutorial-capa {
+    position: fixed;
+    z-index: 2000;
+    inset: 0;
+
+}
+
+
+.tutorial-foco {
+    position: fixed;
+    z-index: 2001;
+    border-radius: 8px;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.75);
+    outline: 2px solid var(--salmon);
+    pointer-events: none;
+    transition: all 0.3s ease;
+
+}
+
+.tutorial-tarjeta {
+    position: fixed;
+    z-index: 2002;
+    width: min(340px, calc(100vm - 24px));
+    padding: 1.2rem;
+    background: var(--bg-card);
+    color: var(--texto);
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.tutorial-tarjeta h2 {
+    margin: 0 0 0.5rem;
+    color: var(--acento-texto);
+    font-size: 1.3rem;
+}
+
+.tutorial-tarjeta p {
+    margin: 0 0 1rem;
+    line-height: 1.4;
+    color: var(--texto);
+}
+
+.tutorial-pie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.tutorial-contador {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+}
+
+.tutorial-botones {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.tutorial-botones button {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--texto);
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.tutorial-botones .tutorial-siguiente {
+    background: var(--red);
+    border-color: var(--red);
+    color: var(--white);
+}
+
+.tutorial-botones button:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+/* Botón "?" del header */
+.ayuda {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-right: 0.5rem;
+    border: 2px solid var(--salmon);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--salmon);
+    font-weight: 700;
+    cursor: pointer;
+}

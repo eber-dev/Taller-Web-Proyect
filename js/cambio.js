@@ -1,3 +1,5 @@
+import { enlazarReservas } from './reservas.js';
+
 const contenido = document.getElementById('contenido');
 
 export async function cargarmodulo(pagina) {
@@ -5,6 +7,7 @@ export async function cargarmodulo(pagina) {
     const modulo = await promesa.text();
 
     contenido.innerHTML = modulo;
+    enlazarReservas();
 
     window.scrollTo(0, 0);
 }
