@@ -4,20 +4,18 @@
     height: 90vh;
     display: flex;
     background-image:
-        linear-gradient(
-            to bottom,
+        linear-gradient(to bottom,
             rgba(0, 0, 0, 0.1) 0%,
             rgba(0, 0, 0, 0.3) 40%,
             rgba(0, 0, 0, 0.7) 75%,
-            rgba(0, 0, 0, 0.95) 100%
-        ),
+            rgba(0, 0, 0, 0.95) 100%),
         url('../assets/img/Disciplina.png');
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.nosotros1 > h1 {
+.nosotros1>h1 {
     color: var(--salmon);
     font-family: 'Oswald', sans-serif;
     font-size: 6rem;
@@ -48,20 +46,20 @@
     justify-content: center;
 }
 
-.historia > section {
+.historia>section {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.historia > section > span {
+.historia>section>span {
     width: 5px;
     height: 40px;
     background-color: var(--salmon);
     display: block;
 }
 
-.historia > section > h1 {
+.historia>section>h1 {
     color: var(--texto);
     font-family: 'Oswald', sans-serif;
     font-size: 2.5rem;
@@ -69,7 +67,7 @@
     margin-bottom: 0.5rem;
 }
 
-.historia > p {
+.historia>p {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--salmon-dark);
     font-size: 1.3rem;
@@ -84,7 +82,7 @@
     width: 50%;
 }
 
-.imagen_seccion2 > img {
+.imagen_seccion2>img {
     max-width: 600px;
     height: auto;
     border: 0.5rem solid var(--bg-card-2);
@@ -99,7 +97,7 @@
     justify-content: center;
 }
 
-.nosotros3 > div {
+.nosotros3>div {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -107,7 +105,7 @@
     justify-content: center;
 }
 
-.nosotros3 > div > h1 {
+.nosotros3>div>h1 {
     color: var(--acento-texto);
     font-size: 4rem;
     font-family: 'Oswald', sans-serif;
@@ -115,7 +113,7 @@
     margin-bottom: 0.5rem;
 }
 
-.nosotros3 > div > p {
+.nosotros3>div>p {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--texto);
     font-size: 1.1rem;
@@ -142,7 +140,7 @@
     border: 1px solid transparent;
 }
 
-.mision > img {
+.mision>img {
     width: 7rem;
     position: absolute;
     z-index: 1;
@@ -155,11 +153,11 @@
     border: 1px solid var(--salmon-light);
 }
 
-.mision:hover > img {
+.mision:hover>img {
     opacity: 0.5;
 }
 
-.mision:hover > h1 {
+.mision:hover>h1 {
     color: var(--acento-texto);
 }
 
@@ -175,7 +173,7 @@
     border: 1px solid transparent;
 }
 
-.vision > img {
+.vision>img {
     width: 7rem;
     position: absolute;
     z-index: 1;
@@ -188,16 +186,16 @@
     border: 1px solid var(--salmon-light);
 }
 
-.vision:hover > img {
+.vision:hover>img {
     opacity: 0.5;
 }
 
-.vision:hover > h1 {
+.vision:hover>h1 {
     color: var(--acento-texto);
 }
 
-.mision > h1,
-.vision > h1 {
+.mision>h1,
+.vision>h1 {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     font-family: 'Oswald', sans-serif;
@@ -205,8 +203,8 @@
     color: var(--texto);
 }
 
-.mision > p,
-.vision > p {
+.mision>p,
+.vision>p {
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
     z-index: 2;
@@ -222,7 +220,7 @@
         padding-inline: 2rem;
     }
 
-    .nosotros1 > h1 {
+    .nosotros1>h1 {
         font-size: clamp(4rem, 8vw, 5.5rem);
         text-align: center;
     }
@@ -243,11 +241,11 @@
         padding-inline: 2rem;
     }
 
-    .historia > section > h1 {
+    .historia>section>h1 {
         font-size: clamp(2rem, 3vw, 2.5rem);
     }
 
-    .historia > p {
+    .historia>p {
         font-size: 1.1rem;
         line-height: 1.5;
     }
@@ -257,12 +255,12 @@
         padding: 2rem;
     }
 
-    .imagen_seccion2 > img {
+    .imagen_seccion2>img {
         width: 100%;
         max-width: 500px;
     }
 
-    .nosotros3 > div > h1 {
+    .nosotros3>div>h1 {
         font-size: clamp(3rem, 5vw, 4rem);
     }
 
@@ -281,15 +279,15 @@
         padding-inline: 2rem;
     }
 
-    .mision > p,
-    .vision > p {
+    .mision>p,
+    .vision>p {
         font-size: 1.1rem;
         line-height: 1.5;
     }
 }
 
 @media (max-width: 900px) {
-    .nosotros1 > h1 {
+    .nosotros1>h1 {
         font-size: clamp(3rem, 8vw, 5rem);
         text-align: center;
     }
@@ -304,7 +302,7 @@
         padding-inline: 1.5rem;
     }
 
-    .historia > p {
+    .historia>p {
         font-size: 1.1rem;
     }
 
@@ -313,8 +311,8 @@
         padding-inline: 2rem;
     }
 
-    .mision > p,
-    .vision > p {
+    .mision>p,
+    .vision>p {
         font-size: 1.1rem;
     }
 }
@@ -326,7 +324,7 @@
         padding-inline: 2rem;
     }
 
-    .nosotros1 > h1 {
+    .nosotros1>h1 {
         font-size: clamp(3rem, 8vw, 4.5rem);
         text-align: center;
         line-height: 1.1;
@@ -352,15 +350,15 @@
         padding: 0 3rem 2rem;
     }
 
-    .historia > section {
+    .historia>section {
         gap: 0.8rem;
     }
 
-    .historia > section > h1 {
+    .historia>section>h1 {
         font-size: clamp(2rem, 4vw, 2.5rem);
     }
 
-    .historia > p {
+    .historia>p {
         font-size: 1.1rem;
         line-height: 1.6;
     }
@@ -371,7 +369,7 @@
         padding: 1rem 3rem 0;
     }
 
-    .imagen_seccion2 > img {
+    .imagen_seccion2>img {
         width: 100%;
         max-width: 600px;
         height: auto;
@@ -384,11 +382,11 @@
         box-sizing: border-box;
     }
 
-    .nosotros3 > div > h1 {
+    .nosotros3>div>h1 {
         font-size: clamp(2.5rem, 6vw, 3.5rem);
     }
 
-    .nosotros3 > div > p {
+    .nosotros3>div>p {
         text-align: center;
         font-size: 1rem;
     }
@@ -411,19 +409,19 @@
         padding: 2.5rem 2.5rem;
     }
 
-    .mision > h1,
-    .vision > h1 {
+    .mision>h1,
+    .vision>h1 {
         font-size: clamp(2rem, 4vw, 2.5rem);
     }
 
-    .mision > p,
-    .vision > p {
+    .mision>p,
+    .vision>p {
         font-size: 1.1rem;
         line-height: 1.6;
     }
 
-    .mision > img,
-    .vision > img {
+    .mision>img,
+    .vision>img {
         width: 6rem;
         right: 2rem;
         top: 2rem;
@@ -437,7 +435,7 @@
         text-align: center;
     }
 
-    .nosotros1 > h1 {
+    .nosotros1>h1 {
         font-size: clamp(2.5rem, 12vw, 4rem);
         margin-bottom: 1rem;
     }
@@ -464,15 +462,15 @@
         padding-left: 1.5rem;
     }
 
-    .historia > section {
+    .historia>section {
         gap: 0.7rem;
     }
 
-    .historia > section > h1 {
+    .historia>section>h1 {
         font-size: 2rem;
     }
 
-    .historia > p {
+    .historia>p {
         font-size: 1rem;
         line-height: 1.6;
     }
@@ -484,7 +482,7 @@
         padding-left: 1.5rem;
     }
 
-    .imagen_seccion2 > img {
+    .imagen_seccion2>img {
         width: 100%;
         height: auto;
     }
@@ -494,16 +492,16 @@
         padding: 2rem 0;
     }
 
-    .nosotros3 > div {
+    .nosotros3>div {
         width: 100%;
         padding: 1rem;
     }
 
-    .nosotros3 > div > h1 {
+    .nosotros3>div>h1 {
         font-size: 3rem;
     }
 
-    .nosotros3 > div > p {
+    .nosotros3>div>p {
         margin: 0;
         text-align: center;
     }
@@ -523,21 +521,59 @@
         padding: 2rem 1.5rem;
     }
 
-    .mision > h1,
-    .vision > h1 {
+    .mision>h1,
+    .vision>h1 {
         font-size: 2rem;
     }
 
-    .mision > p,
-    .vision > p {
+    .mision>p,
+    .vision>p {
         font-size: 1rem;
         line-height: 1.6;
     }
 
-    .mision > img,
-    .vision > img {
+    .mision>img,
+    .vision>img {
         width: 5rem;
         right: 1.5rem;
         top: 1.5rem;
     }
+}
+
+[data-tema='claro'] .nosotros1 {
+    background-image:
+        linear-gradient(to bottom,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.6) 100%),
+        url('../assets/img/Disciplina.png');
+}
+
+[data-tema='claro'] .historia>p {
+    color: var(--acento-texto);
+}
+
+[data-tema='claro'] .nosotros1 p {
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+[data-tema='claro'] .nosotros1>h1,
+[data-tema='claro'] .nosotros1 p {
+    color: var(--red);
+}
+
+[data-tema='claro'] .mision:hover,
+[data-tema='claro'] .vision:hover {
+    border-color: var(--red);
+}
+
+[data-tema='claro'] .mision>img,
+[data-tema='claro'] .vision>img {
+    opacity: 0.5;
+    filter: saturate(8) brightness(0.9);
+}
+
+[data-tema='claro'] .mision:hover>img,
+[data-tema='claro'] .vision:hover>img {
+    opacity: 0.8;
 }
