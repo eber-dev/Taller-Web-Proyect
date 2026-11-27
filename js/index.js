@@ -25,6 +25,20 @@ nosotros.addEventListener('click', () => {
 servicios.addEventListener('click', () => {
     cargarmodulo('servicios');
 });
+document.getElementById('contenido').addEventListener('click', (e) => {
+    if (e.target.classList.contains('secundario')) {
+        servicios.click();
+    }
+    if (e.target.classList.contains('btn-reglamento')) {
+        document.querySelector('.reglamento-modal').showModal();
+    }
+    if (
+        e.target.classList.contains('reglamento-cerrar') ||
+        e.target.classList.contains('reglamento-modal')
+    ) {
+        document.querySelector('.reglamento-modal').close();
+    }
+});
 
 horarios.addEventListener('click', async () => {
     await cargarmodulo('horarios');

@@ -9,13 +9,13 @@
     background-color: var(--bg);
 }
 
-.servicios1 > div {
+.servicios1>div {
     width: 50%;
     display: flex;
     flex-direction: column;
 }
 
-.servicios1 > div > h1 {
+.servicios1>div>h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 3rem;
     margin-top: 0.5rem;
@@ -33,13 +33,13 @@
     gap: 0.5rem;
 }
 
-.especialidad > span {
+.especialidad>span {
     width: 0.5rem;
     height: 4.5rem;
     background-color: var(--red);
 }
 
-.especialidad > p {
+.especialidad>p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3rem;
     color: var(--texto);
@@ -76,7 +76,7 @@
     border-bottom: 2px solid var(--red);
 }
 
-.carta-disciplina:hover > div > img {
+.carta-disciplina:hover>div>img {
     transform: scale(1.1);
     filter: brightness(1.5);
 }
@@ -86,7 +86,7 @@
     width: 100%;
 }
 
-.disciplina-img > img {
+.disciplina-img>img {
     width: 100%;
     display: block;
     transition: transform 0.5s;
@@ -101,20 +101,20 @@
     margin-bottom: 1.5rem;
 }
 
-.disciplina_info > h1 {
+.disciplina_info>h1 {
     color: var(--texto);
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
-.disciplina_info > p {
+.disciplina_info>p {
     color: var(--texto);
     font-size: 1.25rem;
     text-align: justify;
     flex: 1;
 }
 
-.disciplina_info > button {
+.disciplina_info>button {
     border: 2px solid var(--red);
     width: 75%;
 
@@ -127,7 +127,7 @@
     transition: background-color 0.5s ease;
 }
 
-.disciplina_info > button:hover {
+.disciplina_info>button:hover {
     cursor: pointer;
     background-color: var(--red);
 }
@@ -141,11 +141,11 @@
     margin-bottom: 1rem;
 }
 
-.disciplina_beneficio > img {
+.disciplina_beneficio>img {
     height: 2.2rem;
 }
 
-.disciplina_beneficio > p {
+.disciplina_beneficio>p {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--texto);
     font-size: 1.2rem;
@@ -197,7 +197,7 @@
     padding-bottom: 2.5rem;
 }
 
-.etiqueta-part1 > h1 {
+.etiqueta-part1>h1 {
     align-self: flex-start;
     font-family: 'Oswald', sans-serif;
     color: var(--white);
@@ -206,7 +206,7 @@
     font-size: 2.5rem;
 }
 
-.etiqueta-part1 > p {
+.etiqueta-part1>p {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--white);
     font-size: 1.4rem;
@@ -220,7 +220,7 @@
     justify-content: center;
 }
 
-.etiqueta-part2 > button {
+.etiqueta-part2>button {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -232,28 +232,28 @@
     transition: background-color 0.3s ease;
 }
 
-.etiqueta-part2 > button:hover {
+.etiqueta-part2>button:hover {
     cursor: pointer;
     border-color: var(--dark);
     background-color: var(--dark);
 }
 
-.etiqueta-part2 > button:hover > p {
+.etiqueta-part2>button:hover>p {
     color: var(--white);
 }
 
-.etiqueta-part2 > button:hover > img {
+.etiqueta-part2>button:hover>img {
     filter: brightness(0) invert(1);
 }
 
-.etiqueta-part2 > button > p {
+.etiqueta-part2>button>p {
     color: var(--red);
     font-family: 'Oswald', sans-serif;
     font-size: 1.4rem;
     font-weight: bold;
 }
 
-.etiqueta-part2 > button > img {
+.etiqueta-part2>button>img {
     height: 2.5rem;
 }
 
@@ -264,15 +264,15 @@
         padding: 3rem;
     }
 
-    .servicios1 > div {
+    .servicios1>div {
         width: 100%;
     }
 
-    .servicios1 > div > h1 {
+    .servicios1>div>h1 {
         font-size: 2.5rem;
     }
 
-    .especialidad > p {
+    .especialidad>p {
         font-size: 1.2rem;
     }
 
@@ -287,7 +287,7 @@
         min-height: 20rem;
     }
 
-    .disciplina_info > p {
+    .disciplina_info>p {
         font-size: 1.1rem;
     }
 
@@ -305,15 +305,15 @@
         padding: 2rem;
     }
 
-    .etiqueta-part1 > h1 {
+    .etiqueta-part1>h1 {
         font-size: 2.2rem;
     }
 
-    .etiqueta-part1 > p {
+    .etiqueta-part1>p {
         font-size: 1.2rem;
     }
 
-    .etiqueta-part2 > button {
+    .etiqueta-part2>button {
         width: 75%;
         height: 4rem;
     }
@@ -324,11 +324,11 @@
         padding: 2.5rem 1.5rem;
     }
 
-    .servicios1 > div {
+    .servicios1>div {
         width: 100%;
     }
 
-    .servicios1 > div > h1 {
+    .servicios1>div>h1 {
         font-size: 2rem;
         line-height: 1.2;
     }
@@ -337,13 +337,13 @@
         align-items: stretch;
     }
 
-    .especialidad > span {
+    .especialidad>span {
         width: 0.35rem;
         height: auto;
         min-height: 4rem;
     }
 
-    .especialidad > p {
+    .especialidad>p {
         font-size: 1rem;
         line-height: 1.5;
         text-align: left;
@@ -362,18 +362,18 @@
         margin-bottom: 0;
     }
 
-    .disciplina_info > h1 {
+    .disciplina_info>h1 {
         font-size: 1.5rem;
         text-align: center;
     }
 
-    .disciplina_info > p {
+    .disciplina_info>p {
         font-size: 1rem;
         line-height: 1.5;
         text-align: left;
     }
 
-    .disciplina_info > button {
+    .disciplina_info>button {
         width: 100%;
         padding: 0.8rem;
         font-size: 1rem;
@@ -383,11 +383,11 @@
         gap: 0.7rem;
     }
 
-    .disciplina_beneficio > img {
+    .disciplina_beneficio>img {
         height: 1.8rem;
     }
 
-    .disciplina_beneficio > p {
+    .disciplina_beneficio>p {
         font-size: 1rem;
     }
 
@@ -405,13 +405,13 @@
         padding: 2rem 1.5rem;
     }
 
-    .etiqueta-part1 > h1 {
+    .etiqueta-part1>h1 {
         align-self: center;
         text-align: center;
         font-size: 2rem;
     }
 
-    .etiqueta-part1 > p {
+    .etiqueta-part1>p {
         font-size: 1rem;
         line-height: 1.5;
         text-align: left;
@@ -421,16 +421,16 @@
         padding: 0 1.5rem 2rem;
     }
 
-    .etiqueta-part2 > button {
+    .etiqueta-part2>button {
         width: 100%;
         height: 4rem;
     }
 
-    .etiqueta-part2 > button > p {
+    .etiqueta-part2>button>p {
         font-size: 1.2rem;
     }
 
-    .etiqueta-part2 > button > img {
+    .etiqueta-part2>button>img {
         height: 2rem;
     }
 }
@@ -440,11 +440,11 @@
         padding: 2rem 1rem;
     }
 
-    .servicios1 > div > h1 {
+    .servicios1>div>h1 {
         font-size: 1.7rem;
     }
 
-    .especialidad > p {
+    .especialidad>p {
         font-size: 0.95rem;
     }
 
@@ -452,11 +452,11 @@
         padding: 1.5rem 1rem;
     }
 
-    .disciplina_info > h1 {
+    .disciplina_info>h1 {
         font-size: 1.3rem;
     }
 
-    .disciplina_info > p {
+    .disciplina_info>p {
         font-size: 0.95rem;
     }
 
@@ -464,7 +464,7 @@
         padding: 1.5rem 1rem;
     }
 
-    .etiqueta-part1 > h1 {
+    .etiqueta-part1>h1 {
         font-size: 1.7rem;
     }
 
@@ -472,3 +472,18 @@
         padding: 0 1rem 1.5rem;
     }
 }
+
+[data-tema='claro'] .servicios2 {
+    background-color: var(--bg-alt);
+}
+
+[data-tema='claro'] .carta-disciplina {
+    background-color: var(--bg-card);
+    border: 2px solid var(--borde);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+[data-tema='claro'] .carta-disciplina:hover {
+    border-color: var(--red);
+}
+

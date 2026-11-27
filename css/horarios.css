@@ -371,3 +371,66 @@
     font-size: 1.3rem;
     font-weight: bold;
 }
+
+/* Ventana del reglamento */
+.reglamento-modal {
+    width: min(40rem, 92vw);
+    padding: 0;
+    border: 1px solid var(--borde);
+    border-radius: 0.5rem;
+    background-color: var(--bg-card);
+    color: var(--texto);
+}
+
+.reglamento-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.reglamento-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid var(--borde);
+}
+
+.reglamento-header > h2 {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    color: var(--red);
+}
+
+.reglamento-cerrar {
+    border: none;
+    background: transparent;
+    color: var(--texto);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.reglamento-lista {
+    margin: 0;
+    padding: 1.2rem 1.5rem 1.5rem 2.8rem;
+}
+
+.reglamento-lista > li {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+/* Botón "Ver reglamento completo" (ambos temas) */
+.normativa2 > button {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.normativa2 > button:hover {
+    background-color: var(--white);
+    border-color: var(--white);
+    color: var(--red);
+}
+
+/* Tema claro */
+[data-tema='claro'] .normativa2 > button:hover {
+    border-color: var(--red);
+}
